@@ -38,3 +38,11 @@ print(info[1])
 ```text
 CCNO = (123456) , Cost = (3.5)
 ```
+Pure functions in python?
+Example addition of a number will return the integer value, that is it. Nothing else is processed thorughout its execution.
+
+Pure functions in python generally occur on immutable data types, e.g strings, ints, tuples. 
+
+Mutable types (e.g list) change a variable outside its scope.
+
+Referential transparency - If an external function that is essentially pure and returns a class, then replacing a call to that function with the value it returns does not semantically change its behavior.
