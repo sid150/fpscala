@@ -22,3 +22,32 @@ object MyModule{
     println(find_fib(1))
 }
 ```
+Higher order function - accepts a function as an argument
+
+Tail position - when a portion of the code just returns some value, does not process anything else. When there is no additional work left to be done (termination of loop)
+
+
+
+Ex1
+```scala
+object MyModule{
+
+  def fib_nth(n: Int):Int = {
+   def start (n: Int,a: Int,b: Int): Int ={
+      if (n == 1) a // tail recursive
+      else start(n-1,b,a+b)
+   }
+   start(n,0,1)
+  }
+
+  
+  private def find_fib(n: Int) ={
+    val fibo= "The fibonacci sequence of %d st term is %d"
+    fibo.format(n,fib_nth(n))
+  }
+  
+  def main (args:Array[String]): Unit = 
+  //0 1 1 2 3 5 8 13 21 34
+    println(find_fib(10))
+}
+```
